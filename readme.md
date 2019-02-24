@@ -2,6 +2,8 @@
 
 A boilerplate to build gnome native applications using nodejs.
 
+![screenshot](./screenshot.png)
+
 ## Developers
 
 ```bash
