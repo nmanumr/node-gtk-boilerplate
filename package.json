@@ -1,0 +1,26 @@
+{
+  "name": "node-gtk-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "build": "pkg . --target host --output build/app && cp lib/binding/node-v57-linux-x64/node_gtk.node build/",
+    "pack": "npm run build && DEBUG=flatpak-bundler node flatpak.js",
+    "flatpak:install": "flatpak install --user --bundle node-gtk.flatpak -y",
+    "flatpak:uninstall": "flatpak uninstall com.boilerplate.node-gtk -y",
+    "flatpak:run": "flatpak run com.boilerplate.node-gtk"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "flatpak-bundler": "^0.1.3",
+    "node-gtk": "^0.2.2",
+    "pkg": "^4.3.7"
+  },
+  "bin": "src/main.js",
+  "pkg": {
+    "assets": "src/ui/**"
+  }
+}
