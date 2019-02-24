@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/main.js",
-    "build": "pkg . --target host --output build/app && cp lib/binding/node-v57-linux-x64/node_gtk.node build/",
+    "build": "pkg . --target host --output build/app && cp lib/binding/node_gtk.node build/",
     "pack": "npm run build && DEBUG=flatpak-bundler node flatpak.js",
     "flatpak:install": "flatpak install --user --bundle node-gtk.flatpak -y",
     "flatpak:uninstall": "flatpak uninstall com.boilerplate.node-gtk -y",
