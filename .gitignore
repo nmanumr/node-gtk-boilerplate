@@ -2,3 +2,4 @@ node_modules
 build
 tmp.*
 *.flatpak
+lib/binding/node_gtk.node
