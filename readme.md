@@ -4,30 +4,35 @@ A boilerplate to build gnome native applications using nodejs.
 
 ![screenshot](./screenshot.png)
 
-## Developers
+## Usage
 
-```bash
-# get locally
-git clone https://github.com/nmanumr/node-gtk-boilerplate.git
+* Clone Repo:
+```git clone https://github.com/nmanumr/node-gtk-boilerplate.git```
 
-# install npm modules
-npm install
+* Install dependencies (Refer to [node-gtk guide](https://www.npmjs.com/package/node-gtk#installing-and-building) for more details):
+```npm install```
 
-# install flatpak
-sudo apt install flatpak
+* Copy node-gtk bindings:
+```cp ./node_modules/node-gtk/lib/binding/[BINDING_VERSION]/node_gtk.node ./lib/binding/```
 
-# install flatpack runtime
-flatpak install flathub org.gnome.Platform//3.28 org.gnome.Sdk//3.28
+* Test run:
+```npm start```
 
-# bundle flatpak
-npm run pack
+**Bundling for flatpak**
 
-# install bundle
-npm run flatpak:install
+* Install flatpak: https://flatpak.org/setup/
 
-# run bundle
-npm run flatpak:run
-```
+* Install flatpack runtime:
+```flatpak install flathub org.gnome.Platform//3.28 org.gnome.Sdk//3.28```
+
+* Bundle the app:
+```npm run pack```
+
+* Install flatpak bundle:
+```npm run flatpak:install```
+
+* Run bundled app:
+```npm run flatpak:run```
 
 ## References
 
